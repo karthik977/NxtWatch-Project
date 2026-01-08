@@ -1,0 +1,60 @@
+.bg-container-login {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-container-login {
+  width: 30%;
+  box-shadow: 1px 1px 1px 1px #94a3b8;
+  background-color: #f9f9f9;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.logo-container {
+  width: 100%;
+  text-align: center;
+}
+.logo-image {
+  height: 30px;
+  width: 90px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: #475569;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.input-el {
+  border-radius: 5px;
+  border-color: #94a3b8;
+  border-width: 1px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+.checkbox-text {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #181818;
+}
+.btn {
+  border-width: 0px;
+  background-color: #3b82f6;
+  padding: 4px;
+  font-size: 15px;
+  color: #f8fafc;
+  border-radius: 4px;
+}
+.warning-msg {
+  color: #ff0000;
+  font-family: 'Roboto';
+  font-size: 15px;
+}

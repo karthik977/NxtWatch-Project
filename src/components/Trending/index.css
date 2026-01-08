@@ -1,0 +1,71 @@
+.trending-heading {
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.fire-heading-logo {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.trending-fire-icon {
+  color: #ff0000;
+  font-size: 17px;
+}
+.fire-container-t {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+  padding: 10px;
+  border-radius: 20px;
+}
+.trending-name {
+  font-size: 19px;
+  font-family: 'Roboto';
+  padding: 5px;
+}
+
+.trending-el {
+  display: flex;
+  flex-direction: row;
+}
+.trending-navbar {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+}
+.get-trending-details {
+  overflow-y: scroll;
+  width: 70%;
+  height: 100vh;
+}
+.loading-trending-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.h-bg-dark {
+  background-color: #231f20;
+}
+.h-bg-light {
+  background-color: #ffffff;
+}
+.trending-container {
+  padding:2px;
+  margin:0px;
+}

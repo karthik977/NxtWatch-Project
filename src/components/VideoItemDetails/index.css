@@ -1,0 +1,145 @@
+.bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.txt-dark {
+  color: #000000;
+}
+
+.txt-light {
+  color: #ffffff;
+}
+
+.orange {
+  color: orange;
+}
+
+.channel-Details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.channel-logo {
+  height: 35px;
+  width: 35px;
+}
+.name {
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+.s-count-vi {
+  font-family: 'Roboto';
+  font-size: 11px;
+  color: #64748b;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: normal;
+}
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.video-item-sub {
+  color: #383838;
+  font-size: 12px;
+  margin: 3px;
+}
+.likes {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-con {
+  display: flex;
+  flex-direction: row;
+}
+.video-item {
+  display: flex;
+  flex-direction: row;
+}
+.descc {
+  font-family: 'Roboto';
+  font-size: 12px;
+}
+.con {
+  width: 100%;
+  padding: 1x;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.video-item-like {
+  color: #383838;
+  background-color: transparent;
+  border-width: 0px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.like-reaction {
+  font-size: 18px;
+}
+.video-item-reaction-liked {
+  color: #4f46e5;
+  background-color: transparent;
+  border-width: 0px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.video-item-reaction-disliked {
+  color: #4f46e5;
+  background-color: transparent;
+  border-width: 0px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.video-item-reaction-save {
+  color: #4f46e5;
+  background-color: transparent;
+  border-width: 0px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.video-frame-main {
+  /*extra */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+.video-item-details-loading-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.video-toggle-save {
+  color: #4f46e5;
+}
+.video-item-details-containerr {
+  margin: 0px;
+  height: 100%;
+  padding-top: 3px;
+}

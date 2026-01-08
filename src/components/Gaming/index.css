@@ -1,0 +1,69 @@
+.back-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.back-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.text-dark {
+  color: #000000;
+}
+.text-light {
+  color: #ffffff;
+}
+
+.heading {
+  font-family: 'Roboto';
+  font-size: 17px;
+  padding: 5px;
+}
+
+.unordered-list {
+  list-style-type: none;
+}
+.gaming-content-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.gaming-navbar {
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+}
+.loading-content-gaming {
+  overflow-y: scroll;
+  height: 100vh;
+  width: 70%;
+}
+.gaming-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gaming-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.real-game-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+}
+.real-game-icon {
+  font-size: 15px;
+  color: #ff0000;
+}
+.bg-gaming{
+  padding:2px;
+  margin:0px;
+}

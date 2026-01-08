@@ -1,0 +1,22 @@
+.list-item {
+  margin: 3px;
+}
+.gaming-image {
+  height: 160px;
+  width: 120px;
+  margin: 3px;
+}
+.game-name {
+  font-size: 14px;
+  font-family: 'Roboto';
+  text-decoration: none;
+}
+.gaming-views {
+  font-size: 12px;
+  font-family: 'Roboto';
+  color: #424242;
+  text-decoration: none;
+}
+.gaming-linker {
+  text-decoration: none;
+}

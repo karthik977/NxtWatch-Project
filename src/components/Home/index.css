@@ -1,0 +1,109 @@
+.bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.failure-image {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 2px;
+}
+
+.unordered-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.total-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.bg-container {
+  flex-grow: 4;
+}
+.home-bg-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.abc {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.loading-home {
+  width: 70%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.nav-element {
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+}
+.home-search-bar {
+  height: 20px;
+  width: 200px;
+}
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home-video-item {
+  text-decoration: none;
+}
+.home-thumbnail-image {
+  width: 250px;
+  margin: 2px;
+}
+.each-video-item {
+  width: 250px;
+  margin: 3px;
+}
+.channel-image {
+  height: 35px;
+  width: 35px;
+  margin: 2px;
+}
+.home-video-details-container {
+  display: flex;
+  flex-direction: row;
+}
+.home-video-title {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.home-video-channel-name {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #64748b;
+}
+.channel-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.channel-view-count {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #64748b;
+}
+.loading-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,53 @@
+.bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.bg-navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.connect-logo {
+  height: 35px;
+  width: 35px;
+  margin: 2px;
+}
+.navbar-unordered-list {
+  list-style-type: none;
+}
+.nav-link-text-decor {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-react-icon-redirect {
+  color: #909090;
+  margin-right: 4px;
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+.nav-link-redirect {
+  font-size: 15px;
+  color: #909090;
+  font-family: 'Roboto';
+}
+.bg-navbar-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
