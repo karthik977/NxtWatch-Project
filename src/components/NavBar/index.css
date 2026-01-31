@@ -11,6 +11,7 @@
 .bg-navbar {
   display: flex;
   flex-direction: column;
+  padding-bottom:66px;
 }
 
 .connect {
@@ -49,5 +50,44 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
+  width: 20%;
+}
+
+.active-nav {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.active-nav .nav-react-icon-redirect {
+  color: #ff0000;
+}
+.active-nav {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.active-nav {
+  background-color: #d7dfe9;
+}
+
+.bg-dark .active-nav {
+  background-color: #181818;
+}
+
+.active-nav .nav-react-icon-redirect {
+  color: #ff0000;
+}
+
+.active-nav .nav-link-redirect {
+  color: #ff0000;
+  font-weight: 600;
+}
+.nav-ad-22 {
+  font-family: 'Roboto';
+  font-size: 10px;
+  padding: 2px;
+}
+.contact-us-nav {
+  font-size: 13px;
+  font-family: 'Roboto';
 }

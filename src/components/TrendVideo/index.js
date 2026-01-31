@@ -3,12 +3,18 @@ import './index.css'
 
 const TrendVideo = props => {
   const {trendingVideo} = props
-  const {id, title, thumbnailUrl, viewCount, publishedAt, channel} =
-    trendingVideo
+  const {
+    id,
+    title,
+    thumbnailUrl,
+    viewCount,
+    publishedAt,
+    channel,
+  } = trendingVideo
   const {name} = channel
   return (
-    <Link to={`/videos/${id}`} className="linker-trending">
-      <li className="trend-container">
+    <li className="trend-container">
+      <Link to={`/videos/${id}`} className="linker-trending">
         <img
           src={thumbnailUrl}
           alt="video thumbnail"
@@ -22,8 +28,8 @@ const TrendVideo = props => {
             <p className="t-published"> {publishedAt}</p>
           </div>
         </div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   )
 }
 

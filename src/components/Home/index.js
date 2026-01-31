@@ -31,6 +31,37 @@ class Home extends Component {
     this.getVideos()
   }
 
+  timeAgo = publishedAt => {
+    const publishedDate = new Date(publishedAt)
+    const now = new Date()
+
+    const diffInSeconds = Math.floor((now - publishedDate) / 1000)
+
+    const minutes = Math.floor(diffInSeconds / 60)
+    const hours = Math.floor(minutes / 60)
+    const days = Math.floor(hours / 24)
+    const months = Math.floor(days / 30)
+    const years = Math.floor(days / 365)
+
+    if (minutes < 60) {
+      return `${minutes} minute${minutes > 1 ? 's' : ''} ago`
+    }
+
+    if (hours < 24) {
+      return `${hours} hour${hours > 1 ? 's' : ''} ago`
+    }
+
+    if (days < 30) {
+      return `${days} day${days > 1 ? 's' : ''} ago`
+    }
+
+    if (days < 365) {
+      return `${months} month${months > 1 ? 's' : ''} ago`
+    }
+
+    return `${years} year${years > 1 ? 's' : ''} ago`
+  }
+
   getVideos = async () => {
     this.setState({apiStatus: apiStatusConstants.loading})
     const jwtToken = Cookies.get('jwt_token')
@@ -140,7 +171,7 @@ class Home extends Component {
                             {eachVideo.viewCount} views .
                           </p>
                           <p className="channel-view-count">
-                            {eachVideo.publishedAt}
+                            {this.timeAgo(eachVideo.publishedAt)}
                           </p>
                         </div>
                       </div>
@@ -175,13 +206,11 @@ class Home extends Component {
     </ThemeContext.Consumer>
   )
 
-  renderLoadingView = () => {
-    return (
-      <div data-testid="loader" className="loading-view">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
-      </div>
-    )
-  }
+  renderLoadingView = () => (
+    <div data-testid="loader" className="loading-view">
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    </div>
+  )
 
   getView = () => {
     const {apiStatus} = this.state

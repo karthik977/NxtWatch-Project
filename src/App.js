@@ -20,9 +20,23 @@ class App extends Component {
   }
 
   saveVideo = videoDetails => {
-    this.setState(prevState => ({
-      savedVideos: [...prevState.savedVideos, videoDetails],
-    }))
+    this.setState(prevState => {
+      const isAlreadySaved = prevState.savedVideos.find(
+        each => each.id === videoDetails.id,
+      )
+
+      if (isAlreadySaved) {
+        return {
+          savedVideos: prevState.savedVideos.filter(
+            each => each.id !== videoDetails.id,
+          ),
+        }
+      }
+
+      return {
+        savedVideos: [...prevState.savedVideos, videoDetails],
+      }
+    })
   }
 
   render() {

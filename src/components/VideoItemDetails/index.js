@@ -1,6 +1,6 @@
 import {Component} from 'react'
-import {AiOutlineLike} from 'react-icons/ai'
-import {AiOutlineDislike} from 'react-icons/ai'
+import {AiOutlineLike, AiOutlineDislike} from 'react-icons/ai'
+// import {AiOutlineDislike} from 'react-icons/ai'
 import {FaRegSave} from 'react-icons/fa'
 import ReactPlayer from 'react-player'
 
@@ -30,7 +30,6 @@ class VideoItemDetails extends Component {
     apiStatus: apistatusconstant.loading,
     isLike: false,
     isDisLike: false,
-    isSave: false,
   }
 
   componentDidMount() {
@@ -113,24 +112,24 @@ class VideoItemDetails extends Component {
   renderSuccessView = () => (
     <ThemeContext.Consumer>
       {value => {
-        const {isDark, saveVideo} = value
-        const {isSave} = this.state
+        const {savedVideos, saveVideo, isDark} = value
+        const {videoDetails} = this.state
+
+        const isSaved = savedVideos.some(each => each.id === videoDetails.id)
+
         const saveVideoBtn = () => {
-          const {videoDetails} = this.state
-          if (!isSave) {
-            saveVideo(videoDetails)
-          }
-          this.setState({isSave: true})
+          saveVideo(videoDetails)
         }
 
-        const videoSavedClassName = isSave
+        const videoSavedClassName = isSaved
           ? 'video-item-reaction-save'
           : 'video-item-like'
-        const videoSavedContent = isSave ? 'Saved' : 'Save'
+
+        const videoSavedContent = isSaved ? 'Saved' : 'Save'
 
         const bgColor = isDark ? 'bg-dark' : 'bg-light'
         const colors = isDark ? 'txt-dark' : 'txt-light'
-        const {channelDetails, videoDetails, isLike, isDisLike} = this.state
+        const {channelDetails, isLike, isDisLike} = this.state
         const {
           description,
 
@@ -158,7 +157,7 @@ class VideoItemDetails extends Component {
             <div className={`${bgColor} video-item`}>
               <NavBar />
               <div className={`${bgColor} video-main`}>
-                <div>
+                <div className="react-player">
                   <ReactPlayer url={videoUrl} className="frame-adjustment" />
                 </div>
                 <p className={`${bgColor} title`}>{title}</p>
@@ -172,7 +171,7 @@ class VideoItemDetails extends Component {
                         {publishedAt}
                       </p>
                     </div>
-                    <div className={`{bgColor} likes`}>
+                    <div className="{bgColor} likes">
                       <button
                         type="button"
                         className={`${isLikedBtn}`}
@@ -190,10 +189,14 @@ class VideoItemDetails extends Component {
                       <button
                         type="button"
                         onClick={saveVideoBtn}
-                        className={`${videoSavedClassName}`}
+                        className={
+                          isSaved
+                            ? 'video-item-reaction-save'
+                            : 'video-item-like'
+                        }
                       >
-                        <FaRegSave className="like-reaction" />{' '}
-                        {videoSavedContent}
+                        <FaRegSave className="like-reaction" />
+                        {isSaved ? 'Saved' : 'Save'}
                       </button>
                     </div>
                   </div>
@@ -220,6 +223,7 @@ class VideoItemDetails extends Component {
       }}
     </ThemeContext.Consumer>
   )
+
   renderFailureView = () => (
     <ThemeContext.Consumer>
       {value => {
@@ -247,18 +251,17 @@ class VideoItemDetails extends Component {
       }}
     </ThemeContext.Consumer>
   )
-  renderLoadingView = () => {
-    return (
-      <div data-testid="loader" className="video-item-details-loading-view">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
-      </div>
-    )
-  }
+
+  renderLoadingView = () => (
+    <div data-testid="loader" className="video-item-details-loading-view">
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    </div>
+  )
 
   render() {
     return (
       <>
-        <div>{this.getViews()}</div>
+        <div className="getviews-video-details">{this.getViews()}</div>
       </>
     )
   }

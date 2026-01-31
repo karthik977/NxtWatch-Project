@@ -1,8 +1,13 @@
 import {BsX} from 'react-icons/bs'
+import {withRouter} from 'react-router-dom'
 import './index.css'
 
 const Premium = props => {
   const {showPremiumAd} = props
+  const redirectGet = () => {
+    const {history} = props
+    history.push('/Not-Found')
+  }
   const premiumAd = () => {
     showPremiumAd()
   }
@@ -26,11 +31,11 @@ const Premium = props => {
       <p className="premium-para">
         Buy Nxt Watch Premium prepaid plans with UPI
       </p>
-      <button type="button" className="premium-button">
+      <button type="button" className="premium-button" onClick={redirectGet}>
         GET IT NOW
       </button>
     </div>
   )
 }
 
-export default Premium
+export default withRouter(Premium)

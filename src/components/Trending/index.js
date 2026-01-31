@@ -113,13 +113,11 @@ class Trending extends Component {
     </ThemeContext.Consumer>
   )
 
-  renderLoading = () => {
-    return (
-      <div data-testid="loader" className="loading-trending-view">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
-      </div>
-    )
-  }
+  renderLoading = () => (
+    <div data-testid="loader" className="loading-trending-view">
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    </div>
+  )
 
   getView = () => {
     const {tApiStatus} = this.state

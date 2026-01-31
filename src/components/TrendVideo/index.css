@@ -33,5 +33,7 @@
 }
 .linker-trending {
   text-decoration: none;
-  color: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

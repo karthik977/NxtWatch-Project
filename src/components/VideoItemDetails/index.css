@@ -32,6 +32,7 @@
 .name {
   font-family: 'Roboto';
   font-size: 13px;
+  color: #64748b;
 }
 .s-count-vi {
   font-family: 'Roboto';
@@ -141,5 +142,19 @@
 .video-item-details-containerr {
   margin: 0px;
   height: 100%;
+  width: 100%;
+
   padding-top: 3px;
+}
+.getviews-video-details {
+  height: 100%;
+  width: 100%;
+}
+.video-main {
+  height: 100%;
+  width: 100%;
+}
+.react-player {
+  display: flex;
+  justify-content: center;
 }

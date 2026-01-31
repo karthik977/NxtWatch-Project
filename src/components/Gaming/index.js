@@ -84,6 +84,7 @@ class Gaming extends Component {
       }}
     </ThemeContext.Consumer>
   )
+
   renderFailure = () => (
     <ThemeContext.Consumer>
       {value => {
@@ -94,7 +95,7 @@ class Gaming extends Component {
           ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-dark-theme-img.png'
           : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
         return (
-          <div className={`${bgColor}`}>
+          <div className={`${bgColor} bg-loading-viewwer-container`}>
             <img src={imageUrl} alt="failure view" />
             <h1 className={`${colors}`}>Oops! Something Went Wrong</h1>
             <p className={`${colors}`}>
@@ -109,13 +110,12 @@ class Gaming extends Component {
       }}
     </ThemeContext.Consumer>
   )
-  renderLoad = () => {
-    return (
-      <div data-testid="loader" className="gaming-loader">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
-      </div>
-    )
-  }
+
+  renderLoad = () => (
+    <div data-testid="loader" className="gaming-loaderr123">
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    </div>
+  )
 
   getGame = () => {
     const {gamingApi} = this.state

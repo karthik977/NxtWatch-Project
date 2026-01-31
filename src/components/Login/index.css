@@ -13,6 +13,7 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
 }
 .logo-container {
   width: 100%;
@@ -42,7 +43,7 @@
 }
 .checkbox-text {
   font-family: 'Roboto';
-  font-size: 15px;
+  font-size: 13px;
   color: #181818;
 }
 .btn {
@@ -57,4 +58,9 @@
   color: #ff0000;
   font-family: 'Roboto';
   font-size: 15px;
+}
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
